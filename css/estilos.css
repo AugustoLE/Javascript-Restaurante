@@ -45,6 +45,28 @@ a:hover {
   font-size: 1.25rem;
   color: #777;
 }
+.imagen-modal {
+  width: 90%;
+  max-width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.imagen-modal + i {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  color: #c84b31;
+  font-size: 2.25rem;
+  background: transparent;
+  display: inline-block;
+  padding: 0.75rem 0.575rem;
+  cursor: pointer;
+}
 /*Encabezado*/
 header .menu-bar-pc {
   background: #fff;
@@ -77,6 +99,9 @@ header .menu-bar-pc .menu-principal a {
 }
 header .menu-bar-pc .top-redes a {
   padding: 0 0.5625rem;
+}
+header .menu-bar-pc .top-redes i {
+  font-size: 1.75rem;
 }
 header .menu-bar-movil {
   background: #fff;
