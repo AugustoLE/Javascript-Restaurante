@@ -1,9 +1,9 @@
 /* Variables*/
-@negro-custom: #141618;
+@negro-custom: #161616;
 @blanco: #fff;
-@texto-oscuro: #303133;
-@texto-claro: #777;
-@dorado: #b4975a;
+@texto-oscuro: #346751;
+@texto-claro: #ecdbba;
+@naranja: #c84b31;
 @gris-claro: #eaeaea;
 
 /* Fuentes a utilizar*/
@@ -46,6 +46,21 @@ a{
 
     &:hover{
         color: fade(@texto-oscuro, 50%)
+    }
+}
+
+.titulo-seccion{
+    h2{
+        font-size: 3.125rem;
+        font-weight: 400;
+        line-height: 3.6875rem;
+        margin-bottom: 1.125rem;
+        font-style: italic;
+        letter-spacing: -0.02em;
+    }
+    p{
+        font-size: 1.25rem;
+        color: #777;
     }
 }
 
@@ -191,6 +206,37 @@ header{
                     left: 50%;
                     transform: translate(-50%, -50%);
                     font-size: 1.5625rem;
+                }
+            }
+        }
+    }
+
+    /* Historia*/
+    .nosotros{
+        padding: 5.625rem 0;
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .col.izq{
+                width: 30%;
+                border-right: 1px solid @gris-claro;
+                display: flex;
+                align-items: center;
+                padding-right: 5%;
+            }
+            .col.der{
+                width: 70%;
+                padding-left: 5%;
+
+                .texto{
+                    p{
+                        font-size: 1.125rem;
+                        line-height: 1.75;
+                        color: @texto-claro;
+                    }
                 }
             }
         }
