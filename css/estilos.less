@@ -1,4 +1,8 @@
-/* Variables*/
+/*-------------------------------------*/
+/*Variables*/
+/*-------------------------------------*/
+
+/*Colores*/
 @negro-custom: #161616;
 @blanco: #fff;
 @texto-oscuro: #346751;
@@ -6,309 +10,374 @@
 @naranja: #c84b31;
 @gris-claro: #eaeaea;
 
-/* Fuentes a utilizar*/
+/*Fuentes*/
 @fuente-principal: 'Josefin Sans', sans-serif;
 @fuente-secundaria: 'Dancing Script', cursive;
 
-/* Estilo General */
+/*Generales*/
 
 *{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	margin:0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body{
-    font-size: 16px;
-    font-family: @fuente-principal;
-    color: @texto-oscuro;
+	font-size: 16px;
+	font-family: @fuente-principal;
+	color: @texto-oscuro;
 }
 
 .container{
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
 }
 
 img{
-    vertical-align: top;
-    max-width: 100%;
+	vertical-align: top;
+	max-width: 100%;
 }
 
 a{
-    text-decoration: none;
-    color: @texto-oscuro;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+	text-decoration: none;
+	color: @texto-oscuro;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
 
-    &:hover{
-        color: fade(@texto-oscuro, 50%)
-    }
+	&:hover{
+		color: fade(@texto-oscuro, 50%);
+	}
 }
 
 .titulo-seccion{
-    h2{
-        font-size: 3.125rem;
-        font-weight: 400;
-        line-height: 3.6875rem;
-        margin-bottom: 1.125rem;
-        font-style: italic;
-        letter-spacing: -0.02em;
-    }
-    p{
-        font-size: 1.25rem;
-        color: #777;
-    }
+	h2{
+		font-size: 3.125rem;
+		font-weight: 400;
+		line-height: 3.6875rem;
+		margin-bottom: 1.125rem;
+		font-style: italic;
+		letter-spacing: -0.02em;
+	}
+
+	p{
+		font-size: 1.25rem;
+		color: #777;
+	}
 }
 
-/* Encabezado */
+
+/*Encabezado*/
 
 header{
-    .menu-bar-pc{
-        background: @blanco;
-        width: 100%;
-        position: fixed;
-        z-index: 99;
-        top: 0;
-        padding: 0 2.25rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 5.875rem;
-        border-bottom: 1px solid @gris-claro;
 
-        .logo{
-            max-width: 3.125rem;
-        }
+	.menu-bar-pc{
+		background: @blanco;
+		width: 100%;
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		padding: 0 2.25rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 5.875rem;
+		border-bottom: 1px solid @gris-claro;
 
-        .menu-principal{
-            
-            a{
-                padding: 0 0.5625rem;
-            }
-        }
+		.logo{
+			max-width: 3.125rem;
+		}
 
-        .top-redes{
-            a{
-                padding: 0 0.5625rem;
-            }
-        }
-    }
+		.menu-principal{
+
+			a{
+				padding: 0 0.5625rem;
+			}
+		}
+
+		.top-redes{
+			a{
+				padding: 0 0.5625rem;
+			}
+		}
+	}
+
+	.menu-bar-movil{
+		background: @blanco;
+		width: 100%;
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		padding: 0 2.25rem;
+		display: none;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 5.875rem;
+		border-bottom: 1px solid @gris-claro;
+
+		.logo{
+			max-width: 3.125rem;
+		}
+
+		.burger-menu{
+			cursor: pointer;
+			font-size: 2.1875rem;
+		}
+
+		.slideMenu{
+			position: fixed;
+			top: 5.875rem;
+			left: -80%;
+			background: @blanco;
+			text-align: center;
+			padding:1.25rem 2.25rem;
+			width: 80%;
+			-webkit-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+
+			&.active{
+				left: 0;
+			}
+
+			.top-redes{
+				margin-bottom: 0.625rem;
+				a{
+					padding: 0 0.5625rem;
+				}
+			}
+
+			.menu-principal{
+				a{
+					display: block;
+					padding: 0.625rem 0;
+					border-top: 1px solid @gris-claro;
+				}
+			}
+		}
+	}
 }
 
-/* Principal */
+/*Main*/
 
 .main{
-    margin-top: 5.875rem;
+	margin-top: 5.875rem;
 
-    /* Portada*/
-    .portada{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+	/*Portada*/
+	.portada{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:space-between;
 
-        .col{
-            width: 50%;
-            background: @negro-custom;
-            color: @blanco;
-            display: flex;
-            flex-wrap: wrap;
+		.col{
+			width: 50%;
+			background: @negro-custom;
+			color: @blanco;
+			display: flex;
+			flex-wrap: wrap;
 
-            .foto{
-                background-size: cover;
-                background-position: center;
-                width: 50%;
+			.foto{
+				background-size: cover;
+				background-position: center;
+				width: 50%;
 
-                &.izq{
-                    background-image: url('../img/portada-1.jpg');
-                    background-position: left;
-                }
-                
-                &.der{
-                    background-image: url('../img/portada-4.jpg');
-                }
+				&.izq{
+					background-image: url('../img/portada-1.jpg');
+					background-position: left;
+				}
 
-                .overlay{
-                    opacity: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: fade(@negro-custom, 40%);
-                    position: relative;
-                    cursor: pointer;
-                    -webkit-transition: all .3s ease;
-                    -o-transition: all .3s ease;
-                    transition: all .3s ease;
+				&.der{
+					background-image: url('../img/portada-4.jpg');
+					opacity: 0.8;
+				}
 
-                    &:hover{
-                        opacity: 1;
-                    }
+				.overlay{
+					opacity: 0;
+					width: 100%;
+					height: 100%;
+					background: fade(@negro-custom, 40%);
+					position: relative;
+					cursor: pointer;
+					-webkit-transition: all .3s ease;
+					-o-transition: all .3s ease;
+					transition: all .3s ease;
 
-                    i{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: 1.5625rem;
-                    }
-                }
-            }
+					&:hover{
+						opacity: 1;
+					}
 
-            .texto{
-                width: 50%;
-                padding: 3.375rem;
-            }
-            h2{
-                font-size: 1.8125rem;
-                font-weight: 400;
-                line-height: 2.6875rem;
-                margin-bottom: 1.125rem;
-            }
-            p{
-                font-size: 0.9375rem;
-                line-height: 1.75;
-            }
-        }
+					i{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						font-size: 1.5625rem;
+					}
+				}
+			}
 
-        .foto-full{
-            width: 100%;
-            min-height: 15.25rem;
-            background-size: cover;
-            background-position: center;
+			.texto{
+				width: 50%;
+				padding: 3.375rem;
 
-            &.izq{
-                background-image: url('../img/portada-2.jpg');
-            }
-            &.der{
-                background-image: url('../img/portada-3.jpg');
-            }
-            .overlay{
-                opacity: 0;
-                width: 100%;
-                height: 100%;
-                background: fade(@negro-custom, 40%);
-                position: relative;
-                cursor: pointer;
-                -webkit-transition: all .3s ease;
-                -o-transition: all .3s ease;
-                transition: all .3s ease;
+				h2{
+					font-size: 1.8125rem;
+					font-weight: 400;
+					line-height: 2.6875rem;
+					margin-bottom: 1.125rem;
+				}
 
-                &:hover{
-                    opacity: 1;
-                }
+				p{
+					font-size: 0.9375rem;
+					line-height: 1.75;
+				}
+			}
 
-                i{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 1.5625rem;
-                }
-            }
-        }
-    }
+			.foto-full{
+				width: 100%;
+				min-height: 15.25rem;
+				background-size: cover;
+				background-position: center;
 
-    /* Historia*/
-    .nosotros{
-        padding: 5.625rem 0;
+				&.izq{
+					background-image: url('../img/portada-2.jpg');
+					opacity: 0.8;
+				}
 
-        .container{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+				&.der{
+					background-image: url('../img/portada-3.jpg');
+				}
 
-            .col.izq{
-                width: 30%;
-                border-right: 1px solid @gris-claro;
-                display: flex;
-                align-items: center;
-                padding-right: 5%;
-            }
-            .col.der{
-                width: 70%;
-                padding-left: 5%;
+				.overlay{
+					opacity: 0;
+					width: 100%;
+					height: 100%;
+					background: fade(@negro-custom, 40%);
+					position: relative;
+					cursor: pointer;
+					-webkit-transition: all .3s ease;
+					-o-transition: all .3s ease;
+					transition: all .3s ease;
 
-                .texto{
-                    p{
-                        font-size: 1.125rem;
-                        line-height: 1.0;
-                        color: @texto-claro;
-                    }
-                }
-            }
-        }
-    }
+					&:hover{
+						opacity: 1;
+					}
 
-    .chef{
-        background: @negro-custom;
-        padding: 5.625rem 0;
+					i{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						font-size: 1.5625rem;
+					}
+				}
+			}
+		}
+	}
 
-        .container{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-    
-            .col{
-                width: 50%;
-    
-                &.izq{
-                    box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.5);
-                    overflow: hidden;
-                }
+	/*Historia*/
+	.nosotros{
+		padding: 5.625rem 0;
 
-                .titulo-seccion{
-                    padding: 3.125rem;
-                    padding-right: 0;
+		.container{
+			display: flex;
+			flex-direction:row;
+			flex-wrap:wrap;
 
-                    h2{
-                        color: @blanco;
-                    }
+			.col.izq{
+				width: 30%;
+				border-right: 1px solid @gris-claro;
+				display: flex;
+				align-items:center;
+				padding-right: 5%;
+			}
 
-                    p{
-                        color: fade(@blanco, 70%);
-                        padding-bottom: 1.125rem;
-                        font-size: 1.125rem;
-                        line-height: 1.75;
+			.col.der{
+				width: 70%;
+				padding-left: 5%;
 
-                        &:last-child{
-                            padding-bottom: 0;
-                        }
-                    }
-                }
+				.texto{
+					p{
+						font-size: 1.125rem;
+						line-height: 1.75;
+						color: @texto-claro;
+					}
+				}
+			}
+		}
+	}
+/* Chef */
+	.chef{
+		background: @negro-custom;
+		padding: 5.625rem 0;
 
-                .slider{
-                    width: 300%;
-                    display: flex;
+		.container{
+			display: flex;
+			flex-direction:row;
+			flex-wrap:wrap;
+			align-items: center;
 
-                    .slide{
-                        width: 100%;
-                        min-height: 400px;
-                        background-size: cover;
-                        background-position: center;
+			.col{
+				width: 50%;
 
-                        &.foto1{
-                            background-image: url('../img/chef-1.jpg');
-                        }
+				&.izq{
+					box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.5);
+					overflow: hidden;
+				}
 
-                        &.foto2{
-                            background-image: url('../img/chef-2.jpg');
-                        }
+				.titulo-seccion{
+					padding:3.125rem;
+					padding-right: 0;
 
-                        &.foto3{
-                            background-image: url('../img/chef-3.jpg');
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    /* Carta */
-    .menu-platos{
+					h2{
+						color:@blanco;
+					}
+					p{
+						color: fade(@blanco, 70%);
+						padding-bottom: 1.125rem;
+						font-size: 1.125rem;
+						line-height: 1.75;
+
+						&:last-child{
+							padding-bottom: 0;
+						}
+					}
+				}
+
+
+				.slider{
+					width: 300%;
+					display: flex;
+
+					.slide{
+						width: 100%;
+						min-height: 400px;
+						background-size: cover;
+						background-position: center;
+
+						&.foto1{
+							background-image: url('../img/chef-1.jpg');
+						}
+
+						&.foto2{
+							background-image: url('../img/chef-2.jpg');
+						}
+
+						&.foto3{
+							background-image: url('../img/chef-3.jpg');
+						}
+					}
+				}
+			}
+		}
+	}
+/* Menú */
+	.menu-platos{
 		padding: 5.625rem 0;
 
 		.container{
@@ -405,9 +474,8 @@ header{
 			}
 		}
 	}
-
-    /* Contacto */
-    .contacto{
+/* Área Contacto */
+	.contacto{
 
 		.datos{
 			padding: 5.625rem 0 11.875rem 0;
@@ -454,7 +522,7 @@ header{
 				}
 			}
 		}
-        /* Formulario */
+/* Formulario */
 		.formulario{
 			position: relative;
 			z-index: 3;
@@ -497,7 +565,7 @@ header{
 					}
 
 					label{
-						color: @texto-oscuro;
+						color: @texto-claro;
 						font-family: @fuente-principal;
 
 						&.label{
@@ -556,6 +624,7 @@ header{
 }
 
 /*Pie de página*/
+
 footer{
 	margin-top: 2.25rem;
 	background: @negro-custom;
@@ -580,7 +649,8 @@ footer{
 	}
 }
 
-/* Media Plataform*/
+/*Queries*/
+
 @media all and (max-width: 1500px){
 	.main{
 		.portada{
@@ -633,6 +703,16 @@ footer{
 }
 
 @media all and (max-width: 800px){
+	header{
+		.menu-bar-pc{
+			display: none;
+		}
+
+		.menu-bar-movil{
+			display: flex;
+		}
+	}
+
 	.main .portada .col{
 		width: 100%;
 
